@@ -7,14 +7,20 @@
 		margin: 0pt;
 		font-family: 'Lato', sans-serif; 
 		color: #ffffee;
-		width: 80%;
-		padding-left: 10%;
+		width: 90%;
+		padding: 5%;
+		padding-top: 3%;
 	}
 	h2 { 
 		color: #ff914d;
+	    font-family: 'Alegreya', serif;
 	}
 	p {
 		font-size: 13pt;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased !important;
+		-moz-font-smoothing: antialiased !important;
+		text-rendering: optimizelegibility !important;
 	}
 	h1 {
 		background-image: url('img_graduation.png');
@@ -35,6 +41,15 @@
 	#contentbody {
 		padding: 20px;
 	}
+	#menu a {
+		text-decoration: none;
+		font-variant-caps: petite-caps;
+		margin-right: 5px;
+		font-weight: bold; 
+	}
+	#menu a:hover {
+		color: #83c2ff;
+	}
 	</style>
 </head>
 <body>
@@ -44,7 +59,13 @@
 <h1>Aprendiz Sofisticado</h1>
 
 <div id="contentbody">
-<a href="../">Voltar para a página principal</a>
+
+<div id="menu">
+<a href="../">Voltar</a>
+<a href="#edicoes">Edições do Projeto</a>
+<a href="#participantes">Certificados</a>
+<a href="#comentarios">Comentários</a>
+</div>
 
 <h2>Projeto de Ensino</h2>
 
@@ -58,7 +79,7 @@
 
 <p>Fazendo-o numa linguagem relativamente acessível, tem-se o objetivo de divulgar, popularizar, os resultados desta ciência e ajudar a fomentar o aprendizado de longo prazo entre os alunos da <a target="_blank" href="https://ufj.edu.br">Universidade Federal de Jataí</a>.
 
-<h2>Edições</h2>
+<h2 id="edicoes">Edições</h2>
 <h3>[2020]</h3>
 <p>Assita a aula de abertura no <a target="_blank"  href=https://bit.ly/aprendizs">Youtube</a></p>
 <p>O curso ocorreu de outubro a dezembro de 2020, durante o ensino remoto na UFJ no Google Classroom.</p>
@@ -66,7 +87,7 @@
 <h3>[2021]</h3>
 <p>Em planejamento: Núcleo livre em 2021.</p>
 
-<h2>Participantes certificados</h2>
+<h2 id="participantes">Participantes certificados</h2>
 
 <p>Lista de participantes que tornaram-se Aprendizes Sofisticados(as), ao aprimorarem suas habilidades de estudo e conscientizarem-se de técnicas científicas que melhoram seu aprendizado a longo prazo, por meio da participação no projeto de ensino Tornando-se um Aprendiz Sofisticado.</p>
 
@@ -80,7 +101,7 @@
   <li>WALTER ALVES COSTA</li>
 </ul>
 
-<h2>Comentários</h2>
+<h2 id="comentarios">Comentários</h2>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_config = function () {
