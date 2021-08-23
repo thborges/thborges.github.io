@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang=pt-BR>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			margin: 0;
+			font-family: system-ui;
+		}
+		h1 {
+			background-color: #202020;
+			box-shadow: 0px 10px 10px 0px #8c8c8c;
+	    	color: rgba(255,255,255,0.7);
+			margin: 0;
+		}
+		h1, h2, h3, h4 {
+			padding: 10px;
+		}
+		img {
+			max-height: 90%;
+		}
+		button {
+			min-height: 50px;
+			font-size: 150%;
+			margin: 10px;
+		}
+		div#images_pre_load img {
+			width: 1px;
+			height: 1px;
+		}
+	</style>
+	<script>
+		function run_test(prefix, qtd) {
+			document.getElementById('infodiv').style.display = 'none';
+			document.getElementById('display').style.display = 'block';
+		
+			var continuar = function(i) {
+				if (i <= qtd) {
+					var img = document.getElementById('teste3img');
+					img.src = prefix + i + ".png";
+					setTimeout(continuar, 2000, i+1);
+				}
+				else {
+					document.getElementById('teste3img').src = '';
+					document.getElementById('display').style.display = 'none';
+				
+					var div = document.getElementById('continue');
+					div.style.display = 'block';
+					var btn = document.getElementById('btncontinue');
+					btn.onclick = function() { continue3(prefix, qtd); };
+				}
+			}
+
+			continuar(1);
+		}
+
+		var correct = 0;
+		var acertos = 0;
+		var erros = 0;
+		function check3_img(clicknr) {
+			var img = document.getElementById('teste3img' + clicknr);
+			if (correct > 0) {
+				if (clicknr == correct) {
+					acertos++;
+					img.style.border = '10px solid green'
+				} else {
+					erros++;
+					img.style.border = '10px solid red'			
+				}
+				correct = 0;
+			}
+		}
+
+		function continue3(prefix, qtd) {
+			document.getElementById('continue').style.display = 'none';
+			document.getElementById('teste3check').style.display = 'block';
+		
+			var continuar = function(i) {
+				correct = Math.floor(Math.random() * 2) + 1;
+			
+				if (i <= qtd) {
+					var img1 = document.getElementById('teste3img1');
+					var img2 = document.getElementById('teste3img2');
+					img1.style.border = '';
+					img2.style.border = '';
+					if (correct == 1) {
+						img1.src = prefix + i + ".png";
+						img2.src = prefix + (i + qtd) +  ".png";
+					} else {
+						img1.src = prefix + (i + qtd) + ".png";
+						img2.src = prefix + i + ".png";					
+					}
+					setTimeout(continuar, 4000, i+1);
+				}
+				else {
+					var img = document.getElementById('teste3img1');
+					img.src = '';
+					img.style.border = '';
+					img = document.getElementById('teste3img2');
+					img.src = '';
+					img.style.border = '';
+				
+					document.getElementById('teste3check').style.display = 'none';
+					var div = document.getElementById('final3');
+					div.style.display = 'inline-block';
+					div.innerHTML = '<h2>Você acertou ' + acertos + ' e errou ' + erros + '.</h2><button onclick="restart();">Voltar</button>';
+				}
+			}
+
+			continuar(1);
+		}
+
+		function restart() {
+			acertos = 0;
+			erros = 0;
+			document.getElementById('final3').style.display = 'none';
+			document.getElementById('infodiv').style.display = 'block';
+		}
+
+		function after_load_images() {
+			document.getElementById('btn3').style.display = 'block';
+			document.getElementById('btn24').style.display = 'block';
+			document.getElementById('loading').style.display = 'none';		
+		}
+	</script>
+</head>
+<body onload="after_load_images()">
+<div id="infodiv">
+	<h1>Teste de memorização de imagens</h1>
+	<h3 style="float: right; background-color: #ccc;" id="loading">Carregando imagens, aguarde...</h3>
+	<h2>Passo 1: Visualize 24 imagens, uma depois da outra, cada uma será exibida por 2 segundos</h2>
+	<h2>Passo 2: As imagens vistas serão apresentadas ao lado de outras não vistas. Clique ou toque na que você viu. As imagens serão apresentadas por apenas quatro segundos cada. Seja breve na escolha.</h2>
+	<h3>No final, um resumo com os acertos e erros será apresentado.</h3>
+	<h4>Pronto(a)? Faça um teste primeiro, com três imagens. Depois clique no botão 24 imagens.</h4>
+	<div style="margin: auto; width: 50%; ">
+	<button id="btn3" style="display: none;" onclick="run_test('T', 3)">Teste com 3 imagens</button>
+	<button id="btn24" style="display: none;" onclick="run_test('', 24)">Teste com 24 imagens</button>
+	</div>
+</div>
+
+<div id="display" style="display: none; margin: auto; height: 80%">
+	<img id="teste3img" src="" style="display: flex; margin: auto; width: 70%;"></img>
+</div>
+<div id="continue" style="display: none; margin: auto; width: 50%">
+	<h2> Pronto para testar? Clique ou toque na imagem que você viu... </h2>
+	<button id='btncontinue'>Continuar</button>
+</div>
+<div id="teste3check" style="display: none; margin: auto; height: 80%">
+	<div style="display: flex; margin: auto; width: 91%;">
+	<img id="teste3img1" src="" onclick="check3_img(1);" style="margin-right: 10px; width: 45%;"></img>
+	<img id="teste3img2" src="" onclick="check3_img(2);" style="width: 45%;"></img>
+	</div>
+</div>
+<div id="final3" style="display: none; margin: auto; height: 80%">
+Final. Acertos, Erros.
+</div>
+
+<div id="images_pre_load" style="display: none">
+	<img src="T1.png"></img>	
+	<img src="T2.png"></img>	
+	<img src="T3.png"></img>	
+	<img src="T4.png"></img>	
+	<img src="T5.png"></img>	
+	<img src="T6.png"></img>	
+	<img src="1.png"></img>	
+	<img src="2.png"></img>	
+	<img src="3.png"></img>	
+	<img src="4.png"></img>	
+	<img src="5.png"></img>	
+	<img src="6.png"></img>	
+	<img src="7.png"></img>	
+	<img src="8.png"></img>	
+	<img src="9.png"></img>	
+	<img src="10.png"></img>	
+	<img src="11.png"></img>	
+	<img src="12.png"></img>	
+	<img src="13.png"></img>	
+	<img src="14.png"></img>	
+	<img src="15.png"></img>	
+	<img src="16.png"></img>	
+	<img src="17.png"></img>	
+	<img src="18.png"></img>	
+	<img src="19.png"></img>	
+	<img src="20.png"></img>	
+	<img src="21.png"></img>	
+	<img src="22.png"></img>	
+	<img src="23.png"></img>	
+	<img src="24.png"></img>	
+	<img src="25.png"></img>	
+	<img src="26.png"></img>	
+	<img src="27.png"></img>	
+	<img src="28.png"></img>	
+	<img src="29.png"></img>	
+	<img src="30.png"></img>	
+	<img src="31.png"></img>	
+	<img src="32.png"></img>	
+	<img src="33.png"></img>	
+	<img src="34.png"></img>	
+	<img src="35.png"></img>	
+	<img src="36.png"></img>	
+	<img src="37.png"></img>	
+	<img src="38.png"></img>	
+	<img src="39.png"></img>	
+	<img src="40.png"></img>	
+	<img src="41.png"></img>	
+	<img src="42.png"></img>	
+	<img src="43.png"></img>	
+	<img src="44.png"></img>	
+	<img src="45.png"></img>	
+	<img src="46.png"></img>	
+	<img src="47.png"></img>	
+	<img src="48.png"></img>
+</div>
+
+</body>
+</html>
