@@ -10,3 +10,29 @@ i {
 	margin: 1cm;
 	size: A4 landscape;
 }
+
+input, select {
+	border: 0;
+	padding-left: 0;
+}
+
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+#assinaturas {
+	display: inline !important;
+}
+
+#assinaturas table {
+	margin-top: 30px;
+	border: 0;
+	text-align: center;
+	width: unset;
+}
+
+#assinaturas td {
+	border: 0;
+	padding-right: 30px;
+}

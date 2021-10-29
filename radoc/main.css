@@ -4,11 +4,22 @@ body {
 	font-family: system-ui;
 }
 
-h1 {
-	background-color: #202020;
-	box-shadow: 0px 10px 10px 0px #8c8c8c;
-	color: rgba(255,255,255,0.7);
+.title {
+	box-shadow: 0px 4px 4px 0px #d1d1d1;
+    border-bottom: 2px solid #2196f3;
+    padding: 10px;
+}
+
+.title p {
 	margin: 0;
+}
+
+.title img {
+    float: left;
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 10px;
+    width: 75px;
 }
 
 .form h1 {
@@ -18,18 +29,17 @@ h1 {
 	color: rgba(255,255,255,0.9);
 }
 
-h1, h2, h3, h4 {
+h1 {
+	padding: 5px;
+	padding-left: 10px;
+	margin-bottom: 0;
+}
+
+h3 {
+    background-color: #ffeb3b2e;
+    font-size: 11pt;
+    font-weight: normal;
 	padding: 10px;
-}
-
-img {
-	max-height: 90%;
-}
-
-button {
-	min-height: 50px;
-	font-size: 150%;
-	margin: 10px;
 }
 
 input, select {
@@ -90,7 +100,6 @@ div.form {
 
 form {
 	margin-top: 5px;
-	border-left: 2px solid #b2b2f1;
 }
 
 table {

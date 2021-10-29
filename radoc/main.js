@@ -429,17 +429,6 @@ function change_required_border(evt) {
 
 
 $(document).ready(function() {
-
-    $('.unidade').select2({
-	    placeholder: "Unidade acadêmica",
-	    allowClear: false 
-	}).on('select2:open', search_here)
-
-    $('.regime').select2({
-	    placeholder: "Regime de trabalho",
-	    allowClear: false 
-	}).on('select2:open', search_here)
-
 	build_edit_form('fensino', 'divensino');
 	build_edit_form('forientacao', 'divorienta');
 	build_edit_form('fprojeto', 'divprojeto');	
