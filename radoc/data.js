@@ -752,6 +752,7 @@ tab_projeto = [
 	{id: 'III-2.3', text: 'Coordenador de contratos e de convênios de cooperação institucional internacional', pontos: 5},
 	{id: 'III-2.4', text: 'Coordenador de contratos e de convênios de cooperação institucional nacional', pontos: 3},
 	{id: 'III-2.5', text: 'Participante de projeto de extensão/cultura cadastrado na PROEC', pontos: 3, pmax: 15},
+	{id: 'III-9.9', text: 'Participante de projeto de pesquisa', pontos: 0},
 ];
 
 tab_extensao = [

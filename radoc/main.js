@@ -409,7 +409,8 @@ function delete_row(form, id) {
 function clear_all_data() {
 	if (confirm("Limpar todos os dados? Não é possível recuperar.")) {
 		data = {};
-		window.reload();
+		localStorage.removeItem('data');
+		document.location.reload(true);
 	}
 }
 
