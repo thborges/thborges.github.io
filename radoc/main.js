@@ -33,7 +33,7 @@ var form_fields = {
 		{name: 'nome', label: 'Orientando', width: 600, type: 'text', required: true},
 		{name: 'nivel', label: 'Nível', width: 0, type: 'select', values: orienta_nivel},
 		{name: 'curso', label: 'Curso', width: 400, type: 'text', required: true},
-		{name: 'universidade', label: 'Universidade/Entidade', width: 600, type: 'text'},
+		{name: 'universidade', label: 'Universidade', width: 600, type: 'text'},
 		{name: 'titulotrabalho', label: 'Título', width: 600, type: 'text', required: true},
 		{name: 'inicio', label: 'Início', width: 160, type: 'date', required: true, onchange: 'valid_termino_orienta()'},
 		{name: 'termino', label: 'Término', width: 160, type: 'date', required: true},
