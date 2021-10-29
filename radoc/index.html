@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang=pt-BR>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="./jquery-3.6.0.min.js"></script>	
+	<script src="./select2.min.js"></script>
+	<script src="./data.js"></script>
+	<script src="./main.js"></script>
+	<link href="./select2.min.css" rel="stylesheet" />
+	<link href="./pure-min.css" rel="stylesheet" />
+	<link href="./main.css" rel="stylesheet" />
+	<link href="print.css" rel="stylesheet" media="print" />	
+<!--	<script src="https://kit.fontawesome.com/464dca0eb7.js" crossorigin="anonymous"></script>	-->
+	<link href="font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+<div id="infodiv">
+	<h1>Relatório da Atividade Docente com Pontuação</h1>
+	<h3 class="noprint">Atenção: Os dados são salvos localmente, neste navegador. Certifique-se de salvar o relatório em PDF após finalizar o preenchimento. Caso necessite interromper o preenchimento, abra novamente o endereço neste mesmo navegador/dispositivo/computador, que os dados serão mantidos.</h3>
+</div>
+
+<div class="form">
+	<h1>Docente
+		<span onclick='save_all_data();'><i class="fa fa-lg fa-save"></i></span>
+		<span onclick='clear_all_data();'><i class="fa fa-lg fa-eraser"></i></span>
+	</h1>
+	<form class="saveform" id="fpessoal">
+		<input type="text" name="name" required placeholder="Nome completo">
+		<input type="number" max="9999999" name="matricula" required placeholder="SIAPE">
+		<input type="email" name="email" required placeholder="E-mail">
+		<select class="unidade" name="unidade" required>
+			<option></option>
+			<option value="Ciências Agrárias">Ciências Agrárias</option>
+			<option value="Ciências Biológicas">Ciências Biológicas</option>
+			<option value="Ciências da Saúde">Ciências da Saúde</option>
+			<option value="Ciências Exatas">Ciências Exatas</option>
+			<option value="Ciências Humanas e Letras">Ciências Humanas e Letras</option>
+			<option value="Ciências Sociais Aplicadas">Ciências Sociais Aplicadas</option>
+			<option value="Educação">Educação</option>
+			<option value="Estudos Geográficos">Estudos Geográficos</option>
+		</select>
+		<select class="regime" name="regime" required>
+			<option></option>
+			<option value="20">20h</option>
+			<option value="40">40h</option>
+			<option value="DE">40h DE</option>
+		</select>
+	</form>
+</div>
+
+
+<div class="form" id="divensino">
+	<h1>Ensino
+		<span onclick="new_form('fensino');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divorienta">
+	<h1>Orientações
+		<span onclick="new_form('forientacao');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divprojeto">
+	<h1>Projetos
+		<span onclick="new_form('fprojeto');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divextensao">
+	<h1>Atividades de Extensão
+		<span onclick="new_form('fextensao');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divacademia">
+	<h1>Atividades Acadêmicas e de Qualificação
+		<span onclick="new_form('facademia');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divadmin">
+	<h1>Atividades Administrativas
+		<span onclick="new_form('fadmin');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divprodutos">
+	<h1>Produtos
+		<span onclick="new_form('fprodutos');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+
+<div class="form" id="divafasta">
+	<h1>Afastamento
+		<span onclick="new_form('fafasta');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<h2><h3>
+<p>* Ainda não são feitos cálculos proporcionais e nem pontuação máxima.</p>
+<h1>
+</body>
+</html>
+

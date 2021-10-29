@@ -1,0 +1,171 @@
+
+body {
+	margin: 0;
+	font-family: system-ui;
+}
+
+h1 {
+	background-color: #202020;
+	box-shadow: 0px 10px 10px 0px #8c8c8c;
+	color: rgba(255,255,255,0.7);
+	margin: 0;
+}
+
+.form h1 {
+	font-size: 100%;
+	box-shadow: none;
+	background-color: #777;
+	color: rgba(255,255,255,0.9);
+}
+
+h1, h2, h3, h4 {
+	padding: 10px;
+}
+
+img {
+	max-height: 90%;
+}
+
+button {
+	min-height: 50px;
+	font-size: 150%;
+	margin: 10px;
+}
+
+input, select {
+	border: none;
+	border: 1px solid #b2b2f1;
+	padding: 4px;
+	box-sizing: border-box;
+	outline: none;
+	margin: 0px 5px 5px 10px;
+	font-family: system-ui;
+	border-radius: 4px !important;	
+}
+
+input[type="radio"], input[type="checkbox"], input[type="button"] {
+	display: inline-block;
+	width: unset;
+}
+
+input:invalid {
+	border: 1px solid red;
+}
+
+::placeholder, .select2-selection__placeholder {
+  color: #999;
+  font-family: system-ui;
+  font-size: 10pt;
+}
+
+.select2 {
+	margin: 0px 5px 5px 10px;
+}
+
+.select2-selection {
+	border: 1px solid #b2b2f1 !important;
+	border-radius: 4px !important;	
+}
+
+.select2-selection.invalid {
+	border: 1px solid red!important;
+}
+
+.select2-search__field {
+	border: none !important;
+	border-bottom: 1px solid #999 !important;
+	margin: 0px !important;
+}
+
+.select2-selection__rendered {
+    color: unset !important;
+	padding-left: 4px !important;
+}
+
+div.form {
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+form {
+	margin-top: 5px;
+	border-left: 2px solid #b2b2f1;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+	margin-top: 5px;
+	width: 100%;
+}
+
+table thead {
+    background-color: aliceblue;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+table td, table th {
+    border-left: 1px solid #cbcbcb;
+    border-width: 0 0 0 1px;
+    font-size: 11pt;
+    margin: 0;
+    padding: .4em .4em;
+}
+
+table td {
+	border: 1px solid #cbcbcb;
+    background-color: transparent;
+}
+
+table tr.odd {
+	background-color: #f6f6f6;
+}
+
+table td.large {
+	min-width: 200px;
+}
+
+table th.acoes {
+	width: 25px;
+}
+
+.wrapper {
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+}
+
+.placeholderlabel {
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	color: #999;
+	font-family: system-ui;
+	font-size: 10pt;
+}
+
+select.use-select-2.select2-attach-processed.required {
+    display: block;
+    position: absolute;
+    height: 0px;
+    pointer-events: none;
+    border-color: transparent;
+    background: transparent;
+    appearance: none;
+}
+
+.fa {
+	color: #03a9f4;
+	padding: 5px;
+}
+.fa:hover {
+	border: 1px solid indianred;
+	color: orange;
+	padding: 4px;
+}
+
