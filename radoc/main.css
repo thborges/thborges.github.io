@@ -23,10 +23,9 @@ body {
 }
 
 .form h1 {
-	font-size: 100%;
-	box-shadow: none;
-	background-color: #777;
-	color: rgba(255,255,255,0.9);
+	font-size: 13pt;
+	background-color: #ccc;
+	color: #333;
 }
 
 h1 {
@@ -174,7 +173,7 @@ select.use-select-2.select2-attach-processed.required {
 }
 .fa:hover {
 	border: 1px solid indianred;
-	color: orange;
+	color: indianred;
 	padding: 4px;
 }
 

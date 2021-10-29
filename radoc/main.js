@@ -212,10 +212,8 @@ function valid_pfinal_produto(e) {
 
 function load_data() {
 	var datastr = localStorage.getItem('data');
-	if (!datastr)
-		return;
-	
-	data = JSON.parse(datastr);
+	if (datastr)
+		data = JSON.parse(datastr);
 	
 	$('.saveform').each(function() {
 		form = $(this).attr('id');
@@ -343,8 +341,13 @@ function draw_table(form) {
 	var header = '<thead><tr><th class="acoes noprint">';
 
 	form_fields[form].forEach(function(e) {
-		if (e['name'] != 'tabela')
-			header += '<th>' + e['label'];
+		if (e['name'] != 'tabela') {
+			if (e['name'] == 'pontos')
+				header += '<th class="noprint">';
+			else
+				header += '<th>';
+			header += e['label'];
+		}
 	});
 	header += '</tr></thead>';
 	table.append(header);
@@ -371,7 +374,11 @@ function draw_table(form) {
 			if (field.name == 'tabela')
 				return;
 
-			td_prefix = '<td' + (field.width > 400 ? ' class="large">' : '>');
+			var classes = 'class="';
+			classes += (field.width > 400 ? ' large ' : '');
+			classes += (field.name == 'pontos' ? ' noprint ' : '');
+			td_prefix = '<td ' + classes + '">';
+
 			if (field.getvalue)
 				row += td_prefix + field.getvalue(form, data, data[field.name])
 			else {
@@ -400,7 +407,10 @@ function delete_row(form, id) {
 }
 
 function clear_all_data() {
-	data = {};
+	if (confirm("Limpar todos os dados? Não é possível recuperar.")) {
+		data = {};
+		window.reload();
+	}
 }
 
 function save_all_data() {
