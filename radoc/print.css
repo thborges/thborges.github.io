@@ -30,6 +30,10 @@ select {
 	-webkit-appearance: none;
 }
 
+table {
+	margin-top: 0;
+}
+
 #assinaturas {
 	display: inline !important;
 }
