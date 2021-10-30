@@ -1,13 +1,27 @@
+@font-face{
+    font-family: 'Fira Sans';
+    src: url("FiraSans-Regular.eot");
+    src: local("Fira Sans Regular"),
+         url("FiraSans-Regular.eot") format("embedded-opentype"),
+         url("FiraSans-Regular.woff") format("woff"),
+         url("FiraSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	margin: 0;
-	font-family: system-ui;
+	font-family: 'Fira Sans', system-ui, sans-serif !important;
 }
 
 .title {
 	box-shadow: 0px 4px 4px 0px #d1d1d1;
-    border-bottom: 2px solid #2196f3;
-    padding: 10px;
+	border-bottom: 2px solid #2196f3;
+	padding: 10px;
 }
 
 .title p {
@@ -15,11 +29,11 @@ body {
 }
 
 .title img {
-    float: left;
-    display: inline-block;
-    margin-top: 2px;
-    margin-right: 10px;
-    width: 75px;
+	float: left;
+	display: inline-block;
+	margin-top: 2px;
+	margin-right: 10px;
+	width: 75px;
 }
 
 .form h1 {
@@ -35,9 +49,9 @@ h1 {
 }
 
 h3 {
-    background-color: #ffeb3b2e;
-    font-size: 11pt;
-    font-weight: normal;
+	background-color: #ffeb3b2e;
+	font-size: 11pt;
+	font-weight: normal;
 	padding: 10px;
 }
 
@@ -48,8 +62,9 @@ input, select {
 	box-sizing: border-box;
 	outline: none;
 	margin: 0px 5px 5px 10px;
-	font-family: system-ui;
-	border-radius: 4px !important;	
+	border-radius: 4px !important;
+	font-family: 'Fira Sans', system-ui, sans-serif;
+	font-size: 11pt;
 }
 
 input[type="radio"], input[type="checkbox"], input[type="button"] {
@@ -57,18 +72,36 @@ input[type="radio"], input[type="checkbox"], input[type="button"] {
 	width: unset;
 }
 
+input[type="button"] {
+	font-weight: bold;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 10px;
+	border: 1px solid #333;
+}
+
+input[type="button"]:hover {
+	color: #03a9f4;
+	border: 1px solid #03a9f4;
+}
+
 input:invalid {
-	border: 1px solid red;
+	border: 1px solid indianred;
+}
+
+label {
+	font-size: 11pt;
 }
 
 ::placeholder, .select2-selection__placeholder {
-  color: #999;
-  font-family: system-ui;
-  font-size: 10pt;
+	color: #999;
+	font-size: 10pt;
 }
 
 .select2 {
 	margin: 0px 5px 5px 10px;
+	font-size: 11pt;
 }
 
 .select2-selection {
@@ -77,7 +110,7 @@ input:invalid {
 }
 
 .select2-selection.invalid {
-	border: 1px solid red!important;
+	border: 1px solid indianred!important;
 }
 
 .select2-search__field {
@@ -87,7 +120,7 @@ input:invalid {
 }
 
 .select2-selection__rendered {
-    color: unset !important;
+	color: unset !important;
 	padding-left: 4px !important;
 }
 
@@ -102,32 +135,32 @@ form {
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    empty-cells: show;
-    border: 1px solid #cbcbcb;
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	border: 1px solid #cbcbcb;
 	margin-top: 5px;
 	width: 100%;
 }
 
 table thead {
-    background-color: aliceblue;
-    color: #000;
-    text-align: left;
-    vertical-align: bottom;
+	background-color: aliceblue;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
 }
 
 table td, table th {
-    border-left: 1px solid #cbcbcb;
-    border-width: 0 0 0 1px;
-    font-size: 11pt;
-    margin: 0;
-    padding: .4em .4em;
+	border-left: 1px solid #cbcbcb;
+	border-width: 0 0 0 1px;
+	font-size: 11pt;
+	margin: 0;
+	padding: .4em .4em;
 }
 
 table td {
 	border: 1px solid #cbcbcb;
-    background-color: transparent;
+	background-color: transparent;
 }
 
 table tr.odd {
@@ -153,18 +186,17 @@ table th.acoes {
 	top: 0px;
 	left: 10px;
 	color: #999;
-	font-family: system-ui;
 	font-size: 10pt;
 }
 
 select.use-select-2.select2-attach-processed.required {
-    display: block;
-    position: absolute;
-    height: 0px;
-    pointer-events: none;
-    border-color: transparent;
-    background: transparent;
-    appearance: none;
+	display: block;
+	position: absolute;
+	height: 0px;
+	pointer-events: none;
+	border-color: transparent;
+	background: transparent;
+	appearance: none;
 }
 
 .fa {

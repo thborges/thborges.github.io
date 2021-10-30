@@ -11,6 +11,10 @@ i {
 	size: A4 landscape;
 }
 
+.title {
+	box-shadow: unset;
+}
+
 input, select {
 	border: 0;
 	padding-left: 0;

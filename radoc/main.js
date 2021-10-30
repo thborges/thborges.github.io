@@ -106,7 +106,7 @@ var form_fields = {
 }
 
 function build_edit_form(form, div) {
-	var newform = $('<form class="saveform" style="display: none" id="' + form +'"></form>');
+	var newform = $('<form class="saveform" autocomplete="on" style="display: none" id="' + form +'"></form>');
 	newform.append('<input type="hidden" name=id>');
 
 	$(form_fields[form]).each(function() {
@@ -397,6 +397,7 @@ function draw_table(form) {
 function edit_row(form, id) {
 	load_form_data(form, id);
 	$('#'+form).show();
+	$('#'+form + ' :input:enabled:visible:first').focus();	
 }
 
 function delete_row(form, id) {
