@@ -32,8 +32,8 @@ var form_fields = {
 		{name: 'matricula', label: 'Matrícula', width: 200, type: 'text', required: true},
 		{name: 'nome', label: 'Orientando', width: 600, type: 'text', required: true},
 		{name: 'nivel', label: 'Nível', width: 0, type: 'select', values: orienta_nivel},
-		{name: 'curso', label: 'Curso', width: 400, type: 'text', required: true},
-		{name: 'universidade', label: 'Universidade', width: 600, type: 'text'},
+		{name: 'curso', label: 'Curso', width: 300, type: 'text', required: true},
+		{name: 'universidade', label: 'Universidade', width: 400, type: 'text'},
 		{name: 'titulotrabalho', label: 'Título', width: 600, type: 'text', required: true},
 		{name: 'inicio', label: 'Início', width: 160, type: 'date', required: true, onchange: 'valid_termino_orienta()'},
 		{name: 'termino', label: 'Término', width: 160, type: 'date', required: true},
@@ -346,7 +346,7 @@ function draw_table(form) {
 				header += '<th class="noprint">';
 			else
 				header += '<th>';
-			header += e['label'];
+			header += e['label'] + '</th>';
 		}
 	});
 	header += '</tr></thead>';

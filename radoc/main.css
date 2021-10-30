@@ -151,8 +151,7 @@ table thead {
 }
 
 table td, table th {
-	border-left: 1px solid #cbcbcb;
-	border-width: 0 0 0 1px;
+	border: 1px solid #cbcbcb;
 	font-size: 11pt;
 	margin: 0;
 	padding: .4em .4em;
