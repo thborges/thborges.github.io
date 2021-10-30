@@ -19,12 +19,14 @@
 		<p>UNIVERSIDADE FEDERAL DE JATAÍ</p>
 		<p>RELATÓRIO ANUAL DOCENTE - ANO BASE: 2021</p>
 	</div>
-	<h3 class="noprint">Atenção: Os dados são salvos automaticamente e localmente, apenas neste navegador. Certifique-se de salvar o relatório em PDF após finalizar o preenchimento. Caso necessite interromper o preenchimento, abra novamente o endereço neste mesmo navegador/dispositivo/computador, que os dados serão mantidos. Ao gerar o PDF, escolha o modo paisagem, diminua o tamanho das margens e remova os cabeçalhos e rodapés (caso estejam habilitados).</h3>
+	<h3 class="noprint">Atenção: Os dados são salvos automaticamente e localmente, apenas neste navegador. Certifique-se de salvar o relatório em PDF após finalizar o preenchimento. Caso necessite interromper o preenchimento, abra novamente o endereço neste mesmo navegador/dispositivo/computador, que os dados serão mantidos. Você também pode fazer o download e abrir o arquivo em outro navegador ou computador. Ao gerar o PDF, escolha o modo paisagem, diminua o tamanho das margens e remova os cabeçalhos e rodapés (caso estejam habilitados).</h3>
 </div>
 
 <div class="form">
 	<h1>Docente
 		<!--<span onclick='save_all_data();'><i class="fa fa-lg fa-save" title="Salvar todos os dados"></i></span>-->
+		<span onclick='save_data_to_file();'><i class="fa fa-lg fa-download" title="Fazer download dos dados"></i></span>
+		<span onclick='load_data_from_file();'><i class="fa fa-lg fa-folder-open" title="Abrir arquivo salvo anteriormente"></i></span>
 		<span onclick='clear_all_data();'><i class="fa fa-lg fa-trash" title="Limpar todos os dados"></i></span>
 	</h1>
 	<form class="saveform" id="fpessoal">

@@ -106,7 +106,7 @@ var form_fields = {
 }
 
 function build_edit_form(form, div) {
-	var newform = $('<form class="saveform" autocomplete="on" style="display: none" id="' + form +'"></form>');
+	var newform = $('<form class="saveform editform" autocomplete="on" style="display: none" id="' + form +'"></form>');
 	newform.append('<input type="hidden" name=id>');
 
 	$(form_fields[form]).each(function() {
@@ -306,7 +306,7 @@ function new_form(form) {
 		field.trigger('change');
 	});
 
-	$('#'+form).show();	
+	$('#'+form).show();
 }
 
 function cancel_form(form) {
@@ -397,13 +397,13 @@ function draw_table(form) {
 function edit_row(form, id) {
 	load_form_data(form, id);
 	$('#'+form).show();
-	$('#'+form + ' :input:enabled:visible:first').focus();	
+	$('#'+form + ' :input:enabled:visible:first').focus();
 }
 
 function delete_row(form, id) {
 	if (confirm("Confirma a exclusão da linha?")) {
 		data[form].splice(id, 1);
-		draw_table(form);		
+		draw_table(form);
 	}
 }
 
@@ -439,13 +439,37 @@ function change_required_border(evt) {
 	}
 }
 
+function save_data_to_file() {
+    var a = document.createElement("a");
+    var file = new Blob([JSON.stringify(data)], {type: 'text/plain'});
+    a.href = URL.createObjectURL(file);
+    a.download = 'radoc' + new Date().getFullYear() + '.json';
+    a.click();
+}
+
+function load_data_from_file() {
+	let input = document.createElement('input');
+	input.type = 'file';
+	input.onchange = _ => {
+		if (confirm("Os dados atuais serão substituídos pelos dados do arquivo.")) {
+			let files = Array.from(input.files);
+			let fr = new FileReader();
+			fr.onload = function (event) {
+				localStorage.setItem('data', event.target.result);
+				load_data();
+			};
+			fr.readAsText(files[0]);
+		}
+	};
+	input.click();
+}
 
 $(document).ready(function() {
 	build_edit_form('fensino', 'divensino');
 	build_edit_form('forientacao', 'divorienta');
-	build_edit_form('fprojeto', 'divprojeto');	
-	build_edit_form('fextensao', 'divextensao');	
-	build_edit_form('facademia', 'divacademia');	
+	build_edit_form('fprojeto', 'divprojeto');
+	build_edit_form('fextensao', 'divextensao');
+	build_edit_form('facademia', 'divacademia');
 	build_edit_form('fadmin', 'divadmin');
 	build_edit_form('fprodutos', 'divprodutos');
 	build_edit_form('fafasta', 'divafasta');

@@ -1,14 +1,19 @@
 i { 
-	display: none !important; 
+	display: none !important;
 }
 
 .noprint {
-	display: none !important; 
+	display: none !important;
 }
 
 @page {
 	margin: 1cm;
-	size: A4 landscape;
+	size: auto A4 landscape;
+}
+
+body {
+	-webkit-print-color-adjust: exact;
+	color-adjust: exact;
 }
 
 .title {
@@ -18,6 +23,10 @@ i {
 div.form {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+form.editform {
+	display: none;
 }
 
 input, select {
@@ -32,6 +41,10 @@ select {
 
 table {
 	margin-top: 0;
+}
+
+td[colspan="1000"] {
+	break-after: avoid;
 }
 
 #assinaturas {
