@@ -14,15 +14,16 @@ var form_is_array = {
 
 var orienta_nivel = ['Graduação', 'Mestrado', 'Doutorado', 'Especialização', 'Aperfeiçoamento', 'Residência Médica', 'Mestrado Profissionalizante', 'Residência multi-profissional', 'Fundamental e Médio', 'Outros'];
 var tipo_afasta = ['Aposentadoria', 'Cargo eletivo', 'Disposição com ônus', 'Disposição com ônus limitado', 'Disposição sem ônus', 'Exclusão', 'Licença capacitação', 'Licença interesse particular', 'Licença maternidade', 'Licença médica', 'Licença prêmio', 'Pós-graduação', 'Outros'];
+var disciplinas_prof = [disciplinas[0]];
 
 var form_fields = {
 	'fensino': [
-		{name: 'disciplina', label: 'Componente Curricular', width: 600, type: 'select', required: true, jsvalues: disciplinas, getvalue: get_disciplina},
+		{name: 'disciplina', label: 'Componente Curricular', width: 600, type: 'select', required: true, jsvalues: disciplinas_prof, getvalue: get_disciplina},
 		{name: 'nivel', label: 'Nível', width: 0, type: 'select', required: true, values: ['Graduação', 'Pós-graduação']},
-		{name: 'ano', label: 'Ano', width: 80, type: 'number', required: true, min: 2000, max: 2100},
-		{name: 'semestre', label: 'Semestre', width: 0, type: 'select', required: true, values: ['1', '2', 'Inverno', 'Verão']},
-		{name: 'turma', label: 'Turma/Subturma', width: 100, type: 'text', required: true},
-		{name: 'chd', label: 'CH Docente', width: 120, type: 'number', required: true, min: 0, max: 96},
+		{name: 'ano', label: 'Ano', width: 80, type: 'number', disabled: true, required: true, min: 2000, max: 2100},
+		{name: 'semestre', label: 'Semestre', width: 60, type: 'select', disabled: true, required: true, values: ['1', '2', '3', '4']},
+		{name: 'turma', label: 'Turma/Subturma', width: 100, type: 'text', disabled: true, required: true},
+		{name: 'chd', label: 'CH Docente', width: 120, type: 'number', required: true, min: 0, max: 128},
 		{name: 'conjugada', label: 'Conjugada', width: 10, type: 'checkbox'},
 		{name: 'pontos', label: 'Pontos*', width: 10, getvalue: get_pontos_ensino, fhidden: true},
 	],
@@ -118,6 +119,10 @@ function build_edit_form(form, div) {
 			newinput += '<select name="' + this.name + '" id="' + form + '_' + this.name + '"';
 			if (this.required)
 				newinput += ' required';
+			if (this.width > 0)
+				newinput += ' style="width: ' + this.width + 'px"';
+			if (this.disabled)
+				newinput += ' disabled';
 			newinput += '>';
 
 			if (this.values) {
@@ -136,6 +141,8 @@ function build_edit_form(form, div) {
 				newinput += ' min="' + this.min + '"';
 			if (this.max != undefined)
 				newinput += ' max="' + this.max + '"';
+			if (this.disabled)
+				newinput += ' disabled';
 			if (this.onchange)
 				newinput += ' onchange="' + this.onchange + '"';
 			if (this.default)
@@ -223,8 +230,10 @@ function load_data() {
 			$('#' + form + ' *').filter(':input').each(function(){
 				field = $(this);
 				fieldname = field.attr('name');
-				if (fieldname && data[form] && data[form][fieldname])
+				if (fieldname && data[form] && data[form][fieldname]) {
 					field.val(data[form][fieldname]);
+					field.trigger('change');
+				}
 			});
 		}
 	});
@@ -267,9 +276,15 @@ function save_form_data(form) {
 	}
 }
 
-function get_disciplina(form, data, code) {
-	var result = disciplinas.find(x => x.id === code);
-	return result.text;
+function get_disciplina(form, data2, code) {
+	var result = disciplinas_prof.find(x => x.id === code);
+	if (result) {
+		var duplicada = data['fensino'].filter(function(value) { return value.disciplina === code; });
+		if (duplicada.length > 1)
+			return "<span style='color: red'>Duplicada! </span>" + result.text;
+		return result.text;
+	} else
+		return 'Disciplina inválida para o professor.';
 }
 
 function get_tabela(form, data, code) {
@@ -283,9 +298,12 @@ function get_tabela(form, data, code) {
 }
 
 function get_pontos_ensino(form, data, oldpoints) {
-	var result = disciplinas.find(x => x.id === data['disciplina']);
-	var ch = Math.min(result.ch, data['chd']);
-	return ch / 32 * 10;
+	var result = disciplinas_prof.find(x => x.id === data['disciplina']);
+	if (result) {
+		var ch = Math.min(result.ch, data['chd']);
+		return ch / 32 * 10;
+	} else
+		return 0;
 }
 
 function get_pontos_tabela(form, data, oldpoints) {
@@ -404,6 +422,7 @@ function delete_row(form, id) {
 	if (confirm("Confirma a exclusão da linha?")) {
 		data[form].splice(id, 1);
 		draw_table(form);
+		save_all_data();
 	}
 }
 
@@ -464,6 +483,31 @@ function load_data_from_file() {
 	input.click();
 }
 
+function filter_prof_componentes() {
+	var siape = $("#siape").val();
+	disciplinas_prof = [disciplinas[0]]; // empty line
+	disciplinas_prof.push(...disciplinas.filter(function(value) {return value.siape == siape;}));
+	// rebuild select2 with new data
+	field = form_fields['fensino'].filter(function(value) {return value.name == 'disciplina';})[0];
+    $('#fensino_' + field.name).empty();	
+    $('#fensino_' + field.name).select2({
+   		placeholder: field.placeholder,
+   		allowClear: !field.required,
+		data: disciplinas_prof,
+		dropdownAutoWidth : true,
+		width: field.width + 'px'
+	}).on('select2:open', search_here)
+	  .on('change', change_required_border);
+}
+
+function on_change_disciplina(e) {
+   	var data = e.params.data;
+	$('#fensino_ano').val(data.ano);
+	$('#fensino_semestre').val(data.semestre);
+	$('#fensino_turma').val(data.turma);
+	$('#fensino_chd').attr('max', data.ch);
+}
+
 $(document).ready(function() {
 	build_edit_form('fensino', 'divensino');
 	build_edit_form('forientacao', 'divorienta');
@@ -473,6 +517,12 @@ $(document).ready(function() {
 	build_edit_form('fadmin', 'divadmin');
 	build_edit_form('fprodutos', 'divprodutos');
 	build_edit_form('fafasta', 'divafasta');
+
+	$("#siape").change(function() {
+		filter_prof_componentes();
+	});
+
+	$("#fensino_disciplina").on('select2:select', on_change_disciplina);
 
 	load_data();
 });

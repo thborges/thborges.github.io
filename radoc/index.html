@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="./jquery-3.6.0.min.js"></script>	
-	<script src="./select2.min.js"></script>
+	<script src="./select2.full.min.js"></script>
 	<script src="./data.js"></script>
 	<script src="./main.js"></script>
 	<link href="./select2.min.css" rel="stylesheet" />
@@ -33,7 +33,7 @@
 
 		<div class="wrapper">
 			<span class="placeholderlabel">SIAPE</span>
-			<input type="number" max="9999999" name="matricula" required style="width: 80px">
+			<input id="siape" type="number" max="9999999" name="matricula" required style="width: 80px">
 		</div>
 
 		<div class="wrapper">
@@ -65,7 +65,7 @@
 			<select class="regime" name="regime" required>
 				<option value="20">20h</option>
 				<option value="40">40h</option>
-				<option value="DE">40h DE</option>
+				<option value="DE" selected="selected">40h DE</option>
 			</select>
 		</div>
 	</form>
