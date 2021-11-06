@@ -108,7 +108,7 @@ var form_fields = {
 
 function build_edit_form(form, div) {
 	var newform = $('<form class="saveform editform" autocomplete="on" style="display: none" id="' + form +'"></form>');
-	newform.append('<input type="hidden" name="id" id="' + form + '_id'">');
+	newform.append('<input type="hidden" name="id" id="' + form + '_id">');
 
 	$(form_fields[form]).each(function() {
 		var newinput = '<div class="wrapper">';
