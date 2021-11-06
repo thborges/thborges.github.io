@@ -267,7 +267,7 @@ function save_form_data(form) {
 		if (!data[form])
 			data[form] = [];
 
-		if (fdata['id'] == '') // insertion
+		if (fdata['id'] == '-1') // insertion
 			fdata['id'] = String(data[form].length);
 
 		data[form][fdata['id']] = fdata;
@@ -318,7 +318,7 @@ function get_pontos_tabela(form, data, oldpoints) {
 
 function new_form(form) {
 	$('#' + form)[0].reset();
-	$('#' + form + '_id').val('');
+	$('#' + form + '_id').val('-1');
 	$('#' + form + ' *').filter(':input').each(function(){
 		field = $(this);
 		field.trigger('change');
