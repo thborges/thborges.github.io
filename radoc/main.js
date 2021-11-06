@@ -133,7 +133,8 @@ function build_edit_form(form, div) {
 			newinput += '</select>';
 		} else {
 			newinput += '<input type="' + this.type + '" name="' + this.name +
-					    '" style="width: ' + this.width + 'px" id="' + form + '_' + this.name + '"';
+					    '" style="width: ' + this.width + 'px" id="' + form + '_' + this.name + 
+						'" autocomplete="on"';
 
 			if (this.required)
 				newinput += ' required';
