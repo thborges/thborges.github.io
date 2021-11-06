@@ -1,3 +1,10 @@
+/*
+Author: Thiago Borges de Oliveira
+Licence: CC BY-NC-SA 4.0
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+Date: 2021-11-05
+*/
+
 tab_orientacao = [
 	{id: '', text: '', pontos: 0, pmax: -1},
 	{id: 'V1.1', text: 'Aluno orientado em tese de doutorado defendida e aprovada', pontos: 20, pmax: -1},

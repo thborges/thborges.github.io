@@ -1,3 +1,10 @@
+/*
+Author: Thiago Borges de Oliveira
+Licence: CC BY-NC-SA 4.0
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+Date: 2021-11-05
+*/
+
 @font-face{
     font-family: 'Fira Sans';
     src: url("FiraSans-Regular.eot");
@@ -88,6 +95,15 @@ input[type="button"]:hover {
 
 input:invalid {
 	border: 1px solid indianred;
+}
+
+
+input:focus, select:focus, .select2-container--focus .select2-selection {
+    background-color: aliceblue;
+}
+
+.select2-container--focus .select2-selection {
+	outline: 0;
 }
 
 label {
