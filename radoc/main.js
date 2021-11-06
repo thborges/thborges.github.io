@@ -108,7 +108,7 @@ var form_fields = {
 
 function build_edit_form(form, div) {
 	var newform = $('<form class="saveform editform" autocomplete="on" style="display: none" id="' + form +'"></form>');
-	newform.append('<input type="hidden" name="id">');
+	newform.append('<input type="hidden" name="id" id="' + form + '_id'">');
 
 	$(form_fields[form]).each(function() {
 		var newinput = '<div class="wrapper">';
@@ -316,17 +316,6 @@ function get_pontos_tabela(form, data, oldpoints) {
 	return 0;
 }
 
-function new_form(form) {
-	$('#' + form)[0].reset();
-	$('#' + form + ' *').filter(':input').each(function(){
-		field = $(this);
-		field.trigger('change');
-	});
-
-	$('#'+form).show();
-	$('#' + form + '_id').val('-1');
-}
-
 function cancel_form(form) {
 	$('#'+form)[0].reset();
 	$('#'+form).hide();
@@ -410,6 +399,17 @@ function draw_table(form) {
 		oddrow = !oddrow;
 	});
 
+}
+
+function insert_row(form) {
+	$('#' + form)[0].reset();
+	$('#' + form + '_id').val('-1');
+	$('#' + form + ' *').filter(':input').each(function(){
+		field = $(this);
+		field.trigger('change');
+	});
+
+	$('#'+form).show();
 }
 
 function edit_row(form, id) {
