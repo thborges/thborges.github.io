@@ -249,7 +249,7 @@ function load_data() {
 }
 
 function load_form_data(form, id) {
-	var df = data[form][id];
+	var df = data[form].find(x => x.id === id);
 	$('#' + form + ' *').filter(':input').each(function(){
 		field = $(this);
 		fieldname = field.attr('name');
@@ -275,19 +275,28 @@ function save_form_data(form) {
 		if (!data[form])
 			data[form] = [];
 
-		if (fdata['id'] == '-1') // insertion
-			fdata['id'] = String(data[form].length);
+		var arrid;
+		if (fdata['id'] == '-1') {// insertion
+			newid = data[form].length;
+			while (data[form].findIndex(x => x && x.id === String(newid)) >= 0)
+				newid++;
+				
+			fdata['id'] = String(newid);
+			arrid = data[form].length;
+		}
+		else
+			arrid = data[form].findIndex(x => x && x.id === fdata['id']);
 
-		data[form][fdata['id']] = fdata;
+		data[form][arrid] = fdata;
 	} else {
 		data[form] = fdata;
 	}
 }
 
 function get_disciplina(form, data2, code) {
-	var result = disciplinas_prof.find(x => x.id === code);
+	var result = disciplinas_prof.find(x => x && x.id === code);
 	if (result) {
-		var duplicada = data['fensino'].filter(function(value) { return value.disciplina === code; });
+		var duplicada = data['fensino'].filter(function(value) { return value && value.disciplina === code; });
 		if (duplicada.length > 1)
 			return "<span style='color: red'>Duplicada! </span>" + result.text;
 		return result.text;
@@ -375,6 +384,7 @@ function draw_table(form) {
 	var tem_tabela = field_tabela ? true : false;
 
 	data[form].forEach(function(data) {
+		if (!data) return;
 		tr_prefix = '<tr' + (oddrow ? ' class="odd"' : '') + '>';
 		row = tr_prefix + '<td rowspan=' + (tem_tabela ? 2 : 1) + ' class="noprint">' +
 			'<span onclick="edit_row(\'' + form + '\', \'' + data['id'] + '\');"><i class="fa fa-lg fa-pencil" title="Editar linha"></i></span>' +
@@ -428,7 +438,8 @@ function edit_row(form, id) {
 
 function delete_row(form, id) {
 	if (confirm("Confirma a exclusão da linha?")) {
-		data[form].splice(id, 1);
+		var idx	= data[form].findIndex(x => x && x.id === id);
+		data[form].splice(idx, 1);
 		draw_table(form);
 		save_all_data();
 	}
@@ -509,7 +520,7 @@ function filter_prof_componentes() {
 }
 
 function on_change_disciplina(e) {
-   	var data = e.params.data;
+	var data = disciplinas_prof.find(x => x && x.id === $('#fensino_disciplina').val());
 	$('#fensino_ano').val(data.ano);
 	$('#fensino_semestre').val(data.semestre);
 	$('#fensino_turma').val(data.turma);
@@ -530,7 +541,7 @@ $(document).ready(function() {
 		filter_prof_componentes();
 	});
 
-	$("#fensino_disciplina").on('select2:select', on_change_disciplina);
+	$("#fensino_disciplina").on('change', on_change_disciplina);
 
 	load_data();
 });
