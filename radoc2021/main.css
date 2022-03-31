@@ -1,0 +1,226 @@
+/*
+Author: Thiago Borges de Oliveira
+Licence: CC BY-NC-SA 4.0
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+Date: 2021-11-05
+*/
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url("FiraSans-Regular.eot");
+    src: local("Fira Sans Regular"),
+         url("FiraSans-Regular.eot") format("embedded-opentype"),
+         url("FiraSans-Regular.woff") format("woff"),
+         url("FiraSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: 'Fira Sans', system-ui, sans-serif !important;
+}
+
+.title {
+	box-shadow: 0px 4px 4px 0px #d1d1d1;
+	border-bottom: 2px solid #2196f3;
+	padding: 10px;
+}
+
+.title p {
+	margin: 0;
+}
+
+.title img {
+	float: left;
+	display: inline-block;
+	margin-top: 2px;
+	margin-right: 10px;
+	width: 75px;
+}
+
+.form h1 {
+	font-size: 13pt;
+	background-color: #ccc;
+	color: #333;
+}
+
+h1 {
+	padding: 5px;
+	padding-left: 10px;
+	margin-bottom: 0;
+}
+
+h3 {
+	background-color: #ffeb3b2e;
+	font-size: 11pt;
+	font-weight: normal;
+	padding: 10px;
+}
+
+input, select {
+	border: none;
+	border: 1px solid #b2b2f1;
+	padding: 4px;
+	box-sizing: border-box;
+	outline: none;
+	margin: 0px 5px 5px 10px;
+	border-radius: 4px !important;
+	font-family: 'Fira Sans', system-ui, sans-serif;
+	font-size: 11pt;
+}
+
+input[type="radio"], input[type="checkbox"], input[type="button"] {
+	display: inline-block;
+	width: unset;
+}
+
+input[type="button"] {
+	font-weight: bold;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 10px;
+	border: 1px solid #333;
+}
+
+input[type="button"]:hover {
+	color: #03a9f4;
+	border: 1px solid #03a9f4;
+}
+
+input:invalid {
+	border: 1px solid indianred;
+}
+
+
+input:focus, select:focus, .select2-container--focus .select2-selection {
+    background-color: aliceblue;
+}
+
+.select2-container--focus .select2-selection {
+	outline: 0;
+}
+
+label {
+	font-size: 11pt;
+}
+
+::placeholder, .select2-selection__placeholder {
+	color: #999;
+	font-size: 10pt;
+}
+
+.select2 {
+	margin: 0px 5px 5px 10px;
+	font-size: 11pt;
+}
+
+.select2-selection {
+	border: 1px solid #b2b2f1 !important;
+	border-radius: 4px !important;	
+}
+
+.select2-selection.invalid {
+	border: 1px solid indianred!important;
+}
+
+.select2-search__field {
+	border: none !important;
+	border-bottom: 1px solid #999 !important;
+	margin: 0px !important;
+}
+
+.select2-selection__rendered {
+	color: unset !important;
+	padding-left: 4px !important;
+}
+
+div.form {
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+form {
+	margin-top: 5px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	border: 1px solid #cbcbcb;
+	margin-top: 5px;
+	width: 100%;
+}
+
+table thead {
+	background-color: aliceblue;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+}
+
+table td, table th {
+	border: 1px solid #cbcbcb;
+	font-size: 11pt;
+	margin: 0;
+	padding: .4em .4em;
+}
+
+table td {
+	border: 1px solid #cbcbcb;
+	background-color: transparent;
+}
+
+table tr.odd {
+	background-color: #f6f6f6;
+}
+
+table td.large {
+	min-width: 200px;
+}
+
+table th.acoes {
+	width: 25px;
+}
+
+.wrapper {
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+}
+
+.placeholderlabel {
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	color: #999;
+	font-size: 10pt;
+}
+
+select.use-select-2.select2-attach-processed.required {
+	display: block;
+	position: absolute;
+	height: 0px;
+	pointer-events: none;
+	border-color: transparent;
+	background: transparent;
+	appearance: none;
+}
+
+.fa {
+	color: #03a9f4;
+	padding: 5px;
+}
+.fa:hover {
+	border: 1px solid indianred;
+	color: indianred;
+	padding: 4px;
+}
+

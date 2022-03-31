@@ -1,0 +1,151 @@
+<!--
+Author: Thiago Borges de Oliveira
+Licence: CC BY-NC-SA 4.0
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+Date: 2021-11-05
+-->
+
+<!doctype html>
+<html lang=pt-BR>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Relatório Anual Docente 2021</title>
+	<script src="./jquery-3.6.0.min.js"></script>	
+	<script src="./select2.full.min.js"></script>
+	<script src="./data.js"></script>
+	<script src="./main.js"></script>
+	<link href="./select2.min.css" rel="stylesheet" />
+	<link href="./main.css" rel="stylesheet" />
+	<link href="./print.css" rel="stylesheet" media="print" />	
+	<link href="./font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+<div id="infodiv">
+	<div class="title">
+		<img src="ufjlogo.png" alt="Logotipo da UFJ"></img>
+		<p>UNIVERSIDADE FEDERAL DE JATAÍ</p>
+		<p>RELATÓRIO ANUAL DOCENTE 2021</p>
+	</div>
+	<h3 class="noprint">Atenção: Os dados são salvos automaticamente e localmente, apenas neste navegador. Certifique-se de salvar o relatório em PDF após finalizar o preenchimento. Caso necessite interromper o preenchimento, abra novamente o endereço neste mesmo navegador/dispositivo/computador; os dados serão mantidos. Você também pode fazer o download e abrir o arquivo em outro navegador ou computador. Para gerar o PDF, use a função Imprimir - Ctrl+P, escolha o destino Salvar em PDF e a orientação paisagem. No navegador Firefox, verifique se a seção Produtos está cortada na impressão ou PDF. Para resolver, escolha a escala Ajustar à largura da página em Mais configurações.</h3>
+</div>
+
+<div class="form">
+	<h1>Docente
+		<!--<span onclick='save_all_data();'><i class="fa fa-lg fa-save" title="Salvar todos os dados"></i></span>-->
+		<span onclick='save_data_to_file();'><i class="fa fa-lg fa-download" title="Fazer download dos dados"></i></span>
+		<span onclick='load_data_from_file();'><i class="fa fa-lg fa-folder-open" title="Abrir arquivo salvo anteriormente"></i></span>
+		<span onclick='clear_all_data();'><i class="fa fa-lg fa-trash" title="Limpar todos os dados"></i></span>
+		<span onclick='window.print();'><i class="fa fa-lg fa-file-pdf-o" title="Salvar PDF ou imprimir o relatório"></i></span>
+	</h1>
+	<form class="saveform" id="fpessoal">
+
+		<div class="wrapper">
+			<span class="placeholderlabel">SIAPE</span>
+			<input id="siape" type="number" max="9999999" name="matricula" required style="width: 80px">
+		</div>
+
+		<div class="wrapper">
+			<span class="placeholderlabel">Nome completo</span>
+			<input type="text" name="name" required style="width: 400px">
+		</div>
+
+		<div class="wrapper">
+			<span class="placeholderlabel">E-mail institucional</span>
+			<input type="email" name="email" required  style="width: 300px">
+		</div>
+		
+		<div class="wrapper">
+			<span class="placeholderlabel">Unidade Acadêmica</span>
+			<select class="unidade" name="unidade" required>
+				<option value="Ciências Agrárias">Ciências Agrárias</option>
+				<option value="Ciências Biológicas">Ciências Biológicas</option>
+				<option value="Ciências da Saúde">Ciências da Saúde</option>
+				<option value="Ciências Exatas">Ciências Exatas</option>
+				<option value="Ciências Humanas e Letras">Ciências Humanas e Letras</option>
+				<option value="Ciências Sociais Aplicadas">Ciências Sociais Aplicadas</option>
+				<option value="Educação">Educação</option>
+				<option value="Estudos Geográficos">Estudos Geográficos</option>
+			</select>
+		</div>
+
+		<div class="wrapper">
+			<span class="placeholderlabel">Regime</span>
+			<select class="regime" name="regime" required>
+				<option value="20">20h</option>
+				<option value="40">40h</option>
+				<option value="DE" selected="selected">40h DE</option>
+			</select>
+		</div>
+	</form>
+	<div id="assinaturas" style="display: none">
+		<table>
+		<tr>
+			<td>_____________________________________</td>
+			<td>_____________________________________</td>
+			<td>______/_______/_______</td>
+		</tr>
+		<tr>
+			<td>Assinatura do Docente</td>
+			<td>Assinatura da Chefia</td>
+			<td>Data da aprovação</td>
+		</table>
+	</div>
+</div>
+
+
+<div class="form" id="divensino">
+	<h1>Ensino
+		<span onclick="insert_row('fensino');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divorienta">
+	<h1>Orientações
+		<span onclick="insert_row('forientacao');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divprojeto">
+	<h1>Projetos
+		<span onclick="insert_row('fprojeto');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divextensao">
+	<h1>Atividades de Extensão
+		<span onclick="insert_row('fextensao');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divacademia">
+	<h1>Atividades Acadêmicas e de Qualificação
+		<span onclick="insert_row('facademia');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divadmin">
+	<h1>Atividades Administrativas
+		<span onclick="insert_row('fadmin');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<div class="form" id="divprodutos">
+	<h1>Produtos
+		<span onclick="insert_row('fprodutos');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+
+<div class="form" id="divafasta">
+	<h1>Afastamento
+		<span onclick="insert_row('fafasta');"><i class="fa fa-lg fa-plus"  title="Incluir novo"></i></span>
+	</h1>
+</div>
+
+<h2>
+<h3 class="noprint">* Ainda não são feitos cálculos proporcionais e nem pontuação máxima.</h3>
+<h2>
+</body>
+</html>
+
