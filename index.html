@@ -4,32 +4,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
   <style>
-    div.content { display: block; }
+    body {
+		font-family: sans-serif;
+		margin: 0;
+		background-color: #eee;
+		opacity: 0.8;
+		background-image: radial-gradient(#8ecae6 0.5px, transparent 0.5px), radial-gradient(#8ecae6 0.5px, #eee 0.5px);
+		background-size: 20px 20px;
+		background-position: 0 0,10px 10px;
+	}
+	h1 {
+		background-color: #012232;
+	    box-shadow: 0px 10px 10px 0px #8c8c8c;
+	    border-bottom-left-radius: 10px;
+	    border-bottom-right-radius: 11px;
+    	color: #fb8500;
+	    margin: 0;
+		padding: 10px;
+		text-align: center;
+	}
+	div.content { 
+		display: block; 
+		max-width: 800px;
+		padding: 20px;
+	}
 	div.item {
 		display: inline-grid;
 		width: 150px;
 	    height: 100px;
-    	background-color: aliceblue;
-	    border: solid 1px #78c0ff;
-	    border-radius: 6px;
+    	background-color: #155b6c;
+	    border-radius: 10px;
 	    margin: 10px;
 		padding: 10px;
 	    text-align: center;
 	    vertical-align: middle;
 		align-content: center;
+		border: 2px solid #186476;		
 	}
 	div.item:hover {
-		background-color: #78c0ff;
-		align-content: middle;
+		border: 2px solid #fb8500;
 	}
-	a { text-decoration: none; }
+	a { 
+		margin-top: 5px;
+		text-decoration: none; 
+		color: #fff; 
+	}
 	svg { width: 100% !important; align-self: center; }
+	.fa-2x {
+		color: #fb8500;
+	}
+
   </style>
 </head>
 <body>
+<h1>Prof. Thiago Borges de Oliveira</h1>
 <div class="content">
   <div class="item"><i class="fas fa-rocket fa-2x"></i><a href="https://thborges.github.io/research/">Pesquisa</a></div>
-  <div class="item"><i class="fas fa-chalkboard-teacher fa-2x"></i><a href="https://thborges.github.io/aprendizsofisticado/">Aprendiz Sofisticado (AS)</a></div>
+  <div class="item"><i class="fas fa-chalkboard-teacher fa-2x"></i><a href="https://thborges.github.io/aprendizsofisticado/">Aprendiz Sofisticado</a></div>
   <div class="item"><i class="fas fa-eye fa-2x"></i><a href="https://thborges.github.io/asvisual/">Teste Visual do AS</a></div>
   <div class="item"><i class="fab fa-github fa-2x"></i><a href="https://github.com/thborges">Github</a></div>
   <div class="item"><a href="http://lattes.cnpq.br/5108431745414375">Currículo Lattes</a></div>
