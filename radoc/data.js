@@ -100,7 +100,7 @@ tab_producao = [
 	{id: 'II-2.11', text: 'Arranjos musicais (canto, coral e orquestral) ', pontos: 5},
 	{id: 'II-2.12', text: 'Apresentação artística ou cultural em rádio ou TV ', pontos: 5},
 	{id: 'II-2.13', text: 'Sonoplastia (cinema, música, rádio, televisão, teatro) ', pontos: 3},
-	{id: 'II-2.14', text: 'Fotos publicitárias, jornalísticas, portfólio ou dossiê̂ jornalístico, ensaio jornalístico ou artístico, charge ou ilustração', pontos: 3, pmax: 15},
+	{id: 'II-2.14', text: 'Fotos publicitárias, jornalísticas, portfólio ou dossiê jornalístico, ensaio jornalístico ou artístico, charge ou ilustração', pontos: 3, pmax: 15},
 
 	{id: 'II-3.1', text: 'Desenvolvimento de programa de computador (software) com registro no INPI ou com disponibilização em ambientes de software livre', pontos: 20},
 	{id: 'II-3.2', text: 'Desenvolvimento de software com divulgação em periódicos indexados e com corpo editorial ou em anais de congresso científico', pontos: 10},
@@ -142,7 +142,7 @@ tab_producao = [
 	{id: 'II-4.5', text: 'Apresentação de pôsteres em congresso científico', pontos: 1, pmax: 3},
 	{id: 'II-4.6', text: 'Organização de caderno de programação e resumos de eventos', pontos: 3, pmax: 9},
 	{id: 'II-4.7', text: 'Trabalho premiado em evento científico nacional ou internacional ', pontos: 5},
-	{id: 'II-4.8', text: 'Tese, dissertação ou trabalho de iniciação científica premiados por instituições de fomento 8 (sendo o docente o autor ou orientador do produto) ', pontos: 8},
+	{id: 'II-4.8', text: 'Tese, dissertação ou trabalho de iniciação científica premiados por instituições de fomento (sendo o docente o autor ou orientador do produto) ', pontos: 8},
 ];
 
 tab_projeto = [
@@ -152,7 +152,7 @@ tab_projeto = [
 	{id: 'I-3.2', text: 'Coordenador de projeto de ensino sem financiamento', pontos: 5, pmax: 10},
 
 	{id: 'III-1.1', text: 'Coordenador de projeto conjuntos de pesquisa e cooperação científica (tipo PRODOC, PROCAD, PNPD, entre outros) e de cursos MINTER e DINTER aprovados por órgãos oficiais de fomento', pontos: 10},
-	{id: 'III-1.2', text: 'Coordenador de projeto de pesquisa ou inovação aprovado com comprovação de 10 financiamento (exceto para os que são exclusivamente destinado a bolsas)', pontos: 10},
+	{id: 'III-1.2', text: 'Coordenador de projeto de pesquisa ou inovação aprovado com comprovação de financiamento (exceto para os que são exclusivamente destinado a bolsas)', pontos: 10},
 	{id: 'III-1.3', text: 'Coordenador de projeto de pesquisa ou inovação aprovado sem financiamento', pontos: 5},
 
 	{id: 'III-2.1', text: 'Coordenador de programa ou projeto de extensão aprovado com comprovação de financiamento (exceto para os que são exclusivamente destinado a bolsas)', pontos: 10},
