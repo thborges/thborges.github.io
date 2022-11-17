@@ -253,7 +253,7 @@ function load_form_data(form, id) {
 	$('#' + form + ' *').filter(':input').each(function(){
 		field = $(this);
 		fieldname = field.attr('name');
-		if (fieldname && df[fieldname]) {
+		if (fieldname) {
 			field.val(df[fieldname]);
 			field.trigger('change');
 		}
