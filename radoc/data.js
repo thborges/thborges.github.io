@@ -2584,7 +2584,6 @@ disciplinas = [
 {siape: 3064931, id: 'ICS0237.G.2022.1', componente: 'ICS0237', turma: 'G', ano: 2022, semestre: 1, text: 'ICS0237 - TRABALHO FINAL DE CURSO - G - 2022.1 - ABERTA', ch: 32},
 {siape: 2985721, id: 'ICS0237.H.2022.1', componente: 'ICS0237', turma: 'H', ano: 2022, semestre: 1, text: 'ICS0237 - TRABALHO FINAL DE CURSO - H - 2022.1 - ABERTA', ch: 32},
 {siape: 1880705, id: 'ICS0237.I.2022.1', componente: 'ICS0237', turma: 'I', ano: 2022, semestre: 1, text: 'ICS0237 - TRABALHO FINAL DE CURSO - I - 2022.1 - ABERTA', ch: 32},
-{siape: 1721011, id: 'ICS0237.J.2022.1', componente: 'ICS0237', turma: 'J', ano: 2022, semestre: 1, text: 'ICS0237 - TRABALHO FINAL DE CURSO - J - 2022.1 - ABERTA', ch: 32},
 {siape: 1727752, id: 'ICS0238.A.2022.1', componente: 'ICS0238', turma: 'A', ano: 2022, semestre: 1, text: 'ICS0238 - TREINAMENTO DESPORTIVO I - A - 2022.1 - ABERTA', ch: 64},
 {siape: 2071586, id: 'ICS0240.A01.2022.1', componente: 'ICS0240', turma: 'A01', ano: 2022, semestre: 1, text: 'ICS0240 - VIGILÂNCIA À SAÚDE - A01 - 2022.1 - ABERTA', ch: 75},
 {siape: 3222224, id: 'ICS0240.A02.2022.1', componente: 'ICS0240', turma: 'A02', ano: 2022, semestre: 1, text: 'ICS0240 - VIGILÂNCIA À SAÚDE - A02 - 2022.1 - ABERTA', ch: 60},
