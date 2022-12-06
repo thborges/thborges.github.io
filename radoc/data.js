@@ -1519,6 +1519,8 @@ disciplinas = [
 {siape: 548016, 	id: 'ICH0111.C.2021.2', 	componente: 'ICH0111', 	turma: 'C', 	ano: 2021, 	semestre: 2, 	text: 'ICH0111 - ESTÁGIO CURR. OBR. ESP. II: PROCESSOS CLÍNICOS - C - 2021.2', 	ch: 64},
 {siape: 548016, 	id: 'ICH0393.A.2021.2', 	componente: 'ICH0393', 	turma: 'A', 	ano: 2021, 	semestre: 2, 	text: 'ICH0393 - PSICODIAGNÓSTICO II - A - 2021.2', 	ch: 64},
 {siape: 548016, 	id: 'ICH0443.A.2021.2', 	componente: 'ICH0443', 	turma: 'A', 	ano: 2021, 	semestre: 2, 	text: 'ICH0443 - PSICOPATOLOGIA I - A - 2021.2', 	ch: 80},
+{siape: 1571520,	id: 'ICA0614.A.2021.2',		componente: 'ICA0614',	turma: 'A',		ano: 2021,	semestre: 2,	text: 'ICA0614 - SUINOCULTURA - A - 2021.2 - CONSOLIDADA', ch: 64},
+{siape: 1690162,	id: 'ICA0614.A.2021.2',		componente: 'ICA0614',	turma: 'A',		ano: 2021,	semestre: 2,	text: 'ICA0614 - SUINOCULTURA - A - 2021.2 - CONSOLIDADA', ch: 16},
 
 // 2022 graduação e pós
 {siape: 1005895, id: 'ICS0244.A01.2022.1', componente: 'ICS0244', turma: 'A01', ano: 2022, semestre: 1, text: 'ICS0244 - ESTUDO MORFOFUNCIONAL DO CORPO HUMANO SAUDÁVEL I - A01 - 2022.1 - ABERTA', ch: 56},
