@@ -2465,7 +2465,7 @@ disciplinas = [
 {siape: 2321939, id: 'ICS0266.A02.2022.1', componente: 'ICS0266', turma: 'A02', ano: 2022, semestre: 1, text: 'ICS0266 - ESTUDO MORFOFUNCIONAL DO CORPO HUMANO SAUDÁVEL II - A02 - 2022.1 - ABERTA', ch: 16},
 {siape: 2321939, id: 'ICS0375.A.2022.1', componente: 'ICS0375', turma: 'A', ano: 2022, semestre: 1, text: 'ICS0375 - ATIVIDADE INTEGRADORA I - A - 2022.1 - ABERTA', ch: 48},
 {siape: 2321939, id: 'ICS0377.A.2022.1', componente: 'ICS0377', turma: 'A', ano: 2022, semestre: 1, text: 'ICS0377 - ATIVIDADE INTEGRADORA II - A - 2022.1 - ABERTA', ch: 48},
-{siape: 2329171, id: 'AGRJ0583.A.2022.2', componente: 'AGRJ0583', turma: 'A', ano: 2022, semestre: 2, text: 'AGRJ0583 - TECNOLOGIA DE PRODUÇÃO DE CULTURAS ENERGÉTICAS - A - 2022.2 - ABERTA', ch: 32},
+{siape: 2329171, id: 'AGRJ0583.A.2022.2', componente: 'AGRJ0583', turma: 'A', ano: 2022, semestre: 2, text: 'AGRJ0583 - TECNOLOGIA DE PRODUÇÃO DE CULTURAS ENERGÉTICAS - A - 2022.2 - ABERTA', ch: 64},
 {siape: 2329171, id: 'ICA0468.A01.2022.1', componente: 'ICA0468', turma: 'A01', ano: 2022, semestre: 1, text: 'ICA0468 - BIOLOGIA E MANEJO DE PLANTAS DANINHAS - A01 - 2022.1 - ABERTA', ch: 32},
 {siape: 2329171, id: 'ICA0468.A02.2022.1', componente: 'ICA0468', turma: 'A02', ano: 2022, semestre: 1, text: 'ICA0468 - BIOLOGIA E MANEJO DE PLANTAS DANINHAS - A02 - 2022.1 - ABERTA', ch: 8},
 {siape: 2329171, id: 'ICA0484.A.2022.1', componente: 'ICA0484', turma: 'A', ano: 2022, semestre: 1, text: 'ICA0484 - CULTURAS DE INVERNO - A - 2022.1 - ABERTA', ch: 48},
