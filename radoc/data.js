@@ -1521,6 +1521,7 @@ disciplinas = [
 {siape: 548016, 	id: 'ICH0443.A.2021.2', 	componente: 'ICH0443', 	turma: 'A', 	ano: 2021, 	semestre: 2, 	text: 'ICH0443 - PSICOPATOLOGIA I - A - 2021.2', 	ch: 80},
 {siape: 1571520,	id: 'ICA0614.A.2021.2',		componente: 'ICA0614',	turma: 'A',		ano: 2021,	semestre: 2,	text: 'ICA0614 - SUINOCULTURA - A - 2021.2 - CONSOLIDADA', ch: 64},
 {siape: 1690162,	id: 'ICA0614.A.2021.2',		componente: 'ICA0614',	turma: 'A',		ano: 2021,	semestre: 2,	text: 'ICA0614 - SUINOCULTURA - A - 2021.2 - CONSOLIDADA', ch: 16},
+{siape: 3018152,	id: 'ICA0665.A.2021.4',		componente: 'ICA0665',	turma: 'A',		ano: 2021,	semestre: 4,	text: 'ICA0665 - RESTAURAÇÃO ECOLÓGICA - A - 2021.4 - CONSOLIDADA', ch: 64},
 
 // 2022 graduação e pós
 {siape: 1005895, id: 'ICS0244.A01.2022.1', componente: 'ICS0244', turma: 'A01', ano: 2022, semestre: 1, text: 'ICS0244 - ESTUDO MORFOFUNCIONAL DO CORPO HUMANO SAUDÁVEL I - A01 - 2022.1 - ABERTA', ch: 56},
