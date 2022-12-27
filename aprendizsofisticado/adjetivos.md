@@ -1,6 +1,11 @@
-Lista de adjetivos com qualidades ou defeitos de uma pessoa.
+# Lista de adjetivos com qualidades ou defeitos de uma pessoa.
 
-Qualidades
+Quantos dos adjetivos abaixo você sabe explicar o significado? 
+
+Exemplo: Uma pessoa afável é uma pessoa que ... ?
+
+## Qualidades
+
 * adorável
 * afável
 * afetivo
@@ -142,7 +147,7 @@ Qualidades
 * verdadeiro
 * zeloso
 
-Defeitos
+## Defeitos
 
 * agressivo
 * ansioso
