@@ -525,6 +525,8 @@ function on_change_disciplina(e) {
 	$('#fensino_semestre').val(data.semestre);
 	$('#fensino_turma').val(data.turma);
 	$('#fensino_chd').attr('max', data.ch);
+	if ($('#fensino_chd').val() == "" && data.id != "")
+		$('#fensino_chd').val(data.ch);
 }
 
 $(document).ready(function() {
