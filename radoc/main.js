@@ -301,7 +301,7 @@ function get_disciplina(form, data2, code) {
 			return "<span style='color: red'>Duplicada! </span>" + result.text;
 		return result.text;
 	} else
-		return 'Disciplina inválida para o professor.';
+		return 'Disciplina ' + code + ' inválida para este ano ou professor. Por favor, exclua essa linha.';
 }
 
 function get_tabela(form, data, code) {
