@@ -1626,7 +1626,10 @@ disciplinas = [
 {siape: 1312908, id: 'ICS0415.A.2022.2', componente: 'ICS0415', turma: 'A', ano: 2022, semestre: 2, text: 'ICS0415 - ESTÁGIO CURRICULAR OBRIGATÓRIO - GINECOLOGIA E OBSTETRÍCIA II - A - 2022.2', ch: 18},
 {siape: 1633586, id: 'ICS0113.A01.2022.2', componente: 'ICS0113', turma: 'A01', ano: 2022, semestre: 2, text: 'ICS0113 - FISIOTERAPIA APLIC A ORTOPEDIA E TRAUMATOLOGIA - A01 - 2022.2', ch: 96},
 {siape: 3300653, id: 'ICS0097.B.2022.2', componente: 'ICS0097', turma: 'B', ano: 2022, semestre: 2, text: 'ICS0097 - ESTÁGIO SUPERVISIONADO HOSPITALAR I - B - 2022.2', ch: 24},
-{siape: 3245501, id: 'ICS0350.A.2022.2', componente: 'ICS0350', turma: 'A', ano: 2022, semestre: 2, text: 'ICS0350 - GENÉTICA - A - 2022.2', ch: 24}
+{siape: 3245501, id: 'ICS0350.A.2022.2', componente: 'ICS0350', turma: 'A', ano: 2022, semestre: 2, text: 'ICS0350 - GENÉTICA - A - 2022.2', ch: 24},
+
+{siape: 1572325, id: 'ICS0237.A.2022.2', componente: 'ICS0237', turma: 'A', ano: 2022, semestre: 2, text: 'ICS0237 - TRABALHO FINAL DE CURSO - A - 2022.2', ch: 32},
+{siape: 1152699, id: 'ICS0237.C.2022.2', componente: 'ICS0237', turma: 'C', ano: 2022, semestre: 2, text: 'ICS0237 - TRABALHO FINAL DE CURSO - C - 2022.2', ch: 32},
 
 ];
 
