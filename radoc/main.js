@@ -502,19 +502,35 @@ function load_data_from_file() {
 	input.click();
 }
 
+function filter_added_comps(state) {
+	if (data['fensino']) {
+		found = data['fensino'].find((d) => d.disciplina == state.id);
+		if (found)
+			return null;
+	}
+	return state.text;
+}
+
 function filter_prof_componentes() {
 	var siape = $("#siape").val();
 	disciplinas_prof = [disciplinas[0]]; // empty line
 	disciplinas_prof.push(...disciplinas.filter(function(value) {return value.siape == siape;}));
+	if (disciplinas_prof.length == 1) {
+		disciplinas_prof[0].text = 'Nenhuma disciplina. Verifique se o número SIAPE está correto e se é o número usado na UFJ. Você pode confirmar no aplicativo Sou Gov.br ou com a Propessoas.';
+	} else {
+		disciplinas_prof[0].text = '';
+	}
+
 	// rebuild select2 with new data
 	field = form_fields['fensino'].filter(function(value) {return value.name == 'disciplina';})[0];
-    $('#fensino_' + field.name).empty();	
+    $('#fensino_' + field.name).empty();
     $('#fensino_' + field.name).select2({
    		placeholder: field.placeholder,
    		allowClear: !field.required,
 		data: disciplinas_prof,
 		dropdownAutoWidth : true,
-		width: field.width + 'px'
+		width: field.width + 'px',
+		templateResult: filter_added_comps
 	}).on('select2:open', search_here)
 	  .on('change', change_required_border);
 }
