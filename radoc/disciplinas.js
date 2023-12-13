@@ -3,7 +3,7 @@
   Author: Thiago Borges de Oliveira
   Licence: CC BY-NC-SA 4.0
   This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-  Generated: 2023-12-12
+  Generated: 2023-12-13
 */
 
 disciplinas = [
@@ -575,6 +575,7 @@ disciplinas = [
 	{siape: 1977569, id: 'GEO0127.A.2022.2', componente: 'GEO0127', turma: 'A', ano: 2022, semestre: 2, text: 'GEO0127 - ESTÁGIO CURRICULAR OBRIGATÓRIO EM GEOGRAFIA III - A - 2022.2', ch: 128},
 	{siape: 1541706, id: 'GEO0127.A.2023.2', componente: 'GEO0127', turma: 'A', ano: 2023, semestre: 2, text: 'GEO0127 - ESTÁGIO CURRICULAR OBRIGATÓRIO EM GEOGRAFIA III - A - 2023.2', ch: 128},
 	{siape: 1586495, id: 'GEO0176.A.2023.1', componente: 'GEO0176', turma: 'A', ano: 2023, semestre: 1, text: 'GEO0176 - COLETA E GERENCIAMENTO DE DADOS EM PESQUISA CIENTÍFICA - A - 2023.1', ch: 64},
+	{siape: 2069183, id: 'GEO0209.A.2023.3', componente: 'GEO0209', turma: 'A', ano: 2023, semestre: 3, text: 'GEO0209 - ANÁLISE SOCIOAMBIENTAL DO CERRADO - A - 2023.3', ch: 64},
 	{siape: 1067165, id: 'GEOJ0035.A.2023.2', componente: 'GEOJ0035', turma: 'A', ano: 2023, semestre: 2, text: 'GEOJ0035 - SEMINÁRIO I - MESTRADO - A - 2023.2', ch: 32},
 	{siape: 1492573, id: 'GEOJ0076.A.2023.2', componente: 'GEOJ0076', turma: 'A', ano: 2023, semestre: 2, text: 'GEOJ0076 - DESCRIÇÃO E ANÁLISE DA VEGETAÇÃO DO CERRADO - A - 2023.2', ch: 64},
 	{siape: 1977569, id: 'GEOJ0104.A.2023.1', componente: 'GEOJ0104', turma: 'A', ano: 2023, semestre: 1, text: 'GEOJ0104 - FUNDAMENTOS DA FORMAÇÃO E DO TRABALHO DOCENTE EM GEOGRAFIA - A - 2023.1', ch: 64},
@@ -1115,11 +1116,13 @@ disciplinas = [
 	{siape: 1329171, id: 'ICA0491.A.2023.2', componente: 'ICA0491', turma: 'A', ano: 2023, semestre: 2, text: 'ICA0491 - CANA-DE-AÇÚCAR - PRODUÇÃO E TECNOLOGIA AGROINDUSTRIAL - A - 2023.2', ch: 64},
 	{siape: 1691574, id: 'ICA0492.A.2022.2', componente: 'ICA0492', turma: 'A', ano: 2022, semestre: 2, text: 'ICA0492 - ECOTOXICOLOGIA DOS AGROTÓXICOS E SAÚDE OCUPACIONAL - A - 2022.2', ch: 32},
 	{siape: 1691574, id: 'ICA0492.A.2023.2', componente: 'ICA0492', turma: 'A', ano: 2023, semestre: 2, text: 'ICA0492 - ECOTOXICOLOGIA DOS AGROTÓXICOS E SAÚDE OCUPACIONAL - A - 2023.2', ch: 32},
+	{siape: 1691574, id: 'ICA0492.A.2023.3', componente: 'ICA0492', turma: 'A', ano: 2023, semestre: 3, text: 'ICA0492 - ECOTOXICOLOGIA DOS AGROTÓXICOS E SAÚDE OCUPACIONAL - A - 2023.3', ch: 32},
 	{siape: 1246553, id: 'ICA0493.A.2022.2', componente: 'ICA0493', turma: 'A', ano: 2022, semestre: 2, text: 'ICA0493 - ÉTICA E EXERCÍCIOS PROFISSIONAIS - A - 2022.2', ch: 32},
 	{siape: 1246553, id: 'ICA0493.A.2023.2', componente: 'ICA0493', turma: 'A', ano: 2023, semestre: 2, text: 'ICA0493 - ÉTICA E EXERCÍCIOS PROFISSIONAIS - A - 2023.2', ch: 32},
 	{siape: 1329171, id: 'ICA0494.A.2022.2', componente: 'ICA0494', turma: 'A', ano: 2022, semestre: 2, text: 'ICA0494 - FEIJÃO E SOJA - A - 2022.2', ch: 64},
 	{siape: 1234088, id: 'ICA0494.A.2023.1', componente: 'ICA0494', turma: 'A', ano: 2023, semestre: 1, text: 'ICA0494 - FEIJÃO E SOJA - A - 2023.1', ch: 64},
 	{siape: 1234088, id: 'ICA0494.A01.2023.2', componente: 'ICA0494', turma: 'A01', ano: 2023, semestre: 2, text: 'ICA0494 - FEIJÃO E SOJA - A01 - 2023.2', ch: 64},
+	{siape: 1234088, id: 'ICA0494.A01.2023.3', componente: 'ICA0494', turma: 'A01', ano: 2023, semestre: 3, text: 'ICA0494 - FEIJÃO E SOJA - A01 - 2023.3', ch: 64},
 	{siape: 1584541, id: 'ICA0495.A.2022.2', componente: 'ICA0495', turma: 'A', ano: 2022, semestre: 2, text: 'ICA0495 - OLERICULTURA II - A - 2022.2', ch: 48},
 	{siape: 1584541, id: 'ICA0495.A.2023.1', componente: 'ICA0495', turma: 'A', ano: 2023, semestre: 1, text: 'ICA0495 - OLERICULTURA II - A - 2023.1', ch: 48},
 	{siape: 1584541, id: 'ICA0495.A.2023.2', componente: 'ICA0495', turma: 'A', ano: 2023, semestre: 2, text: 'ICA0495 - OLERICULTURA II - A - 2023.2', ch: 48},
@@ -1617,6 +1620,7 @@ disciplinas = [
 	{siape: 1700992, id: 'ICE0255.B.2023.2', componente: 'ICE0255', turma: 'B', ano: 2023, semestre: 2, text: 'ICE0255 - MÉTODOS ELETROANALÍTICOS - B - 2023.2', ch: 32},
 	{siape: 1802362, id: 'ICE0256.A.2023.1', componente: 'ICE0256', turma: 'A', ano: 2023, semestre: 1, text: 'ICE0256 - MÉTODOS MATEMÁTICOS PARA A FÍSICA - A - 2023.1', ch: 64},
 	{siape: 1074239, id: 'ICE0258.A.2023.1', componente: 'ICE0258', turma: 'A', ano: 2023, semestre: 1, text: 'ICE0258 - MONOGRAFIA I - A - 2023.1', ch: 32},
+	{siape: 1074239, id: 'ICE0258.A.2023.3', componente: 'ICE0258', turma: 'A', ano: 2023, semestre: 3, text: 'ICE0258 - MONOGRAFIA I - A - 2023.3', ch: 32},
 	{siape: 1802362, id: 'ICE0259.A.2022.2', componente: 'ICE0259', turma: 'A', ano: 2022, semestre: 2, text: 'ICE0259 - MONOGRAFIA II - A - 2022.2', ch: 32},
 	{siape: 1074239, id: 'ICE0259.A.2023.2', componente: 'ICE0259', turma: 'A', ano: 2023, semestre: 2, text: 'ICE0259 - MONOGRAFIA II - A - 2023.2', ch: 32},
 	{siape: 1721412, id: 'ICE0261.A.2022.2', componente: 'ICE0261', turma: 'A', ano: 2022, semestre: 2, text: 'ICE0261 - NOVAS TECNOLOGIAS NO ENSINO DE FÍSICA - A - 2022.2', ch: 80},
@@ -2033,6 +2037,7 @@ disciplinas = [
 	{siape: 1058128, id: 'ICH0269.A.2022.4', componente: 'ICH0269', turma: 'A', ano: 2022, semestre: 4, text: 'ICH0269 - INTRODUÇÃO À LÍNGUA BRASILEIRA DE SINAIS - LIBRAS - A - 2022.4', ch: 64},
 	{siape: 1058128, id: 'ICH0269.A.2023.1', componente: 'ICH0269', turma: 'A', ano: 2023, semestre: 1, text: 'ICH0269 - INTRODUÇÃO À LÍNGUA BRASILEIRA DE SINAIS - LIBRAS - A - 2023.1', ch: 64},
 	{siape: 1058128, id: 'ICH0269.A.2023.2', componente: 'ICH0269', turma: 'A', ano: 2023, semestre: 2, text: 'ICH0269 - INTRODUÇÃO À LÍNGUA BRASILEIRA DE SINAIS - LIBRAS - A - 2023.2', ch: 64},
+	{siape: 1058128, id: 'ICH0269.A.2023.3', componente: 'ICH0269', turma: 'A', ano: 2023, semestre: 3, text: 'ICH0269 - INTRODUÇÃO À LÍNGUA BRASILEIRA DE SINAIS - LIBRAS - A - 2023.3', ch: 64},
 	{siape: 1058128, id: 'ICH0269.B.2022.2', componente: 'ICH0269', turma: 'B', ano: 2022, semestre: 2, text: 'ICH0269 - INTRODUÇÃO À LÍNGUA BRASILEIRA DE SINAIS - LIBRAS - B - 2022.2', ch: 64},
 	{siape: 1058128, id: 'ICH0269.B.2023.1', componente: 'ICH0269', turma: 'B', ano: 2023, semestre: 1, text: 'ICH0269 - INTRODUÇÃO À LÍNGUA BRASILEIRA DE SINAIS - LIBRAS - B - 2023.1', ch: 64},
 	{siape: 1058128, id: 'ICH0269.B.2023.2', componente: 'ICH0269', turma: 'B', ano: 2023, semestre: 2, text: 'ICH0269 - INTRODUÇÃO À LÍNGUA BRASILEIRA DE SINAIS - LIBRAS - B - 2023.2', ch: 64},
@@ -2053,6 +2058,7 @@ disciplinas = [
 	{siape: 1058128, id: 'ICH0285.A.2022.4', componente: 'ICH0285', turma: 'A', ano: 2022, semestre: 4, text: 'ICH0285 - LIBRAS - A - 2022.4', ch: 64},
 	{siape: 1058128, id: 'ICH0285.A.2023.1', componente: 'ICH0285', turma: 'A', ano: 2023, semestre: 1, text: 'ICH0285 - LIBRAS - A - 2023.1', ch: 64},
 	{siape: 1058128, id: 'ICH0285.A.2023.2', componente: 'ICH0285', turma: 'A', ano: 2023, semestre: 2, text: 'ICH0285 - LIBRAS - A - 2023.2', ch: 64},
+	{siape: 1058128, id: 'ICH0285.A.2023.3', componente: 'ICH0285', turma: 'A', ano: 2023, semestre: 3, text: 'ICH0285 - LIBRAS - A - 2023.3', ch: 64},
 	{siape: 1058128, id: 'ICH0285.B.2022.2', componente: 'ICH0285', turma: 'B', ano: 2022, semestre: 2, text: 'ICH0285 - LIBRAS - B - 2022.2', ch: 64},
 	{siape: 1058128, id: 'ICH0285.B.2023.1', componente: 'ICH0285', turma: 'B', ano: 2023, semestre: 1, text: 'ICH0285 - LIBRAS - B - 2023.1', ch: 64},
 	{siape: 1058128, id: 'ICH0285.B.2023.2', componente: 'ICH0285', turma: 'B', ano: 2023, semestre: 2, text: 'ICH0285 - LIBRAS - B - 2023.2', ch: 64},
@@ -2063,6 +2069,7 @@ disciplinas = [
 	{siape: 1767131, id: 'ICH0292.A.2022.2', componente: 'ICH0292', turma: 'A', ano: 2022, semestre: 2, text: 'ICH0292 - LÍNGUA ESTRANGEIRA 2 INGLÊS - A - 2022.2', ch: 64},
 	{siape: 2148832, id: 'ICH0292.A.2023.2', componente: 'ICH0292', turma: 'A', ano: 2023, semestre: 2, text: 'ICH0292 - LÍNGUA ESTRANGEIRA 2 INGLÊS - A - 2023.2', ch: 64},
 	{siape: 1767131, id: 'ICH0292.B.2022.2', componente: 'ICH0292', turma: 'B', ano: 2022, semestre: 2, text: 'ICH0292 - LÍNGUA ESTRANGEIRA 2 INGLÊS - B - 2022.2', ch: 64},
+	{siape: 2148832, id: 'ICH0296.A.2023.3', componente: 'ICH0296', turma: 'A', ano: 2023, semestre: 3, text: 'ICH0296 - LÍNGUA ESTRANGEIRA 3 INGLÊS - A - 2023.3', ch: 64},
 	{siape: 1212778, id: 'ICH0300.A.2022.2', componente: 'ICH0300', turma: 'A', ano: 2022, semestre: 2, text: 'ICH0300 - LÍNGUA ESTRANGEIRA 4 INGLÊS - A - 2022.2', ch: 64},
 	{siape: 1767131, id: 'ICH0300.A.2023.2', componente: 'ICH0300', turma: 'A', ano: 2023, semestre: 2, text: 'ICH0300 - LÍNGUA ESTRANGEIRA 4 INGLÊS - A - 2023.2', ch: 64},
 	{siape: 1017717, id: 'ICH0302.A.2023.1', componente: 'ICH0302', turma: 'A', ano: 2023, semestre: 1, text: 'ICH0302 - LINGÜÍSTICA ANTROPOLÓGICA (DP) - A - 2023.1', ch: 64},
@@ -2215,6 +2222,7 @@ disciplinas = [
 	{siape: 1058128, id: 'ICH0836.A.2022.4', componente: 'ICH0836', turma: 'A', ano: 2022, semestre: 4, text: 'ICH0836 - LIBRAS 1 - LÍNGUA BRASILEIRA DE SINAIS 1 - A - 2022.4', ch: 64},
 	{siape: 1058128, id: 'ICH0836.A.2023.1', componente: 'ICH0836', turma: 'A', ano: 2023, semestre: 1, text: 'ICH0836 - LIBRAS 1 - LÍNGUA BRASILEIRA DE SINAIS 1 - A - 2023.1', ch: 64},
 	{siape: 1058128, id: 'ICH0836.A.2023.2', componente: 'ICH0836', turma: 'A', ano: 2023, semestre: 2, text: 'ICH0836 - LIBRAS 1 - LÍNGUA BRASILEIRA DE SINAIS 1 - A - 2023.2', ch: 64},
+	{siape: 1058128, id: 'ICH0836.A.2023.3', componente: 'ICH0836', turma: 'A', ano: 2023, semestre: 3, text: 'ICH0836 - LIBRAS 1 - LÍNGUA BRASILEIRA DE SINAIS 1 - A - 2023.3', ch: 64},
 	{siape: 1058128, id: 'ICH0836.B.2022.2', componente: 'ICH0836', turma: 'B', ano: 2022, semestre: 2, text: 'ICH0836 - LIBRAS 1 - LÍNGUA BRASILEIRA DE SINAIS 1 - B - 2022.2', ch: 64},
 	{siape: 1058128, id: 'ICH0836.B.2023.1', componente: 'ICH0836', turma: 'B', ano: 2023, semestre: 1, text: 'ICH0836 - LIBRAS 1 - LÍNGUA BRASILEIRA DE SINAIS 1 - B - 2023.1', ch: 64},
 	{siape: 1058128, id: 'ICH0836.B.2023.2', componente: 'ICH0836', turma: 'B', ano: 2023, semestre: 2, text: 'ICH0836 - LIBRAS 1 - LÍNGUA BRASILEIRA DE SINAIS 1 - B - 2023.2', ch: 64},
