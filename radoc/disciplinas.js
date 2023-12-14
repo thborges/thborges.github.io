@@ -3,7 +3,7 @@
   Author: Thiago Borges de Oliveira
   Licence: CC BY-NC-SA 4.0
   This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-  Generated: 2023-12-13
+  Generated: 2023-12-14
 */
 
 disciplinas = [
@@ -102,6 +102,9 @@ disciplinas = [
 	{siape: 1843231, id: 'CCAC0034.A.2023.1', componente: 'CCAC0034', turma: 'A', ano: 2023, semestre: 1, text: 'CCAC0034 - INSERÇÃO PROFISSIONAL NO SUS III - A - 2023.1', ch: 48},
 	{siape: 1945727, id: 'CCAC0035.A.2023.2', componente: 'CCAC0035', turma: 'A', ano: 2023, semestre: 2, text: 'CCAC0035 - INSERÇÃO PROFISSIONAL NO SUS IV - A - 2023.2', ch: 48},
 	{siape: 1272155, id: 'CCAC0044.A.2023.2', componente: 'CCAC0044', turma: 'A', ano: 2023, semestre: 2, text: 'CCAC0044 - TRABALHO DE CONCLUSÃO DE CURSO - A - 2023.2', ch: 20},
+	{siape: 1134331, id: 'CCAC0045.A.2022.2', componente: 'CCAC0045', turma: 'A', ano: 2022, semestre: 2, text: 'CCAC0045 - OFTALMOLOGIA EM ANIMAIS DE COMPANHIA - A - 2022.2', ch: 4},
+	{siape: 1572400, id: 'CCAC0045.A.2022.2', componente: 'CCAC0045', turma: 'A', ano: 2022, semestre: 2, text: 'CCAC0045 - OFTALMOLOGIA EM ANIMAIS DE COMPANHIA - A - 2022.2', ch: 4},
+	{siape: 1272155, id: 'CCAC0045.A.2022.2', componente: 'CCAC0045', turma: 'A', ano: 2022, semestre: 2, text: 'CCAC0045 - OFTALMOLOGIA EM ANIMAIS DE COMPANHIA - A - 2022.2', ch: 56},
 	{siape: 1035828, id: 'CCAC0046.A.2023.2', componente: 'CCAC0046', turma: 'A', ano: 2023, semestre: 2, text: 'CCAC0046 - Tópicos avançados em patologia animal - A - 2023.2', ch: 48},
 	{siape: 1625350, id: 'CCAC0047.A.2023.2', componente: 'CCAC0047', turma: 'A', ano: 2023, semestre: 2, text: 'CCAC0047 - Emergências clínicas e cirúrgicas - A - 2023.2', ch: 32},
 	{siape: 1263807, id: 'CCAC0048.A.2023.2', componente: 'CCAC0048', turma: 'A', ano: 2023, semestre: 2, text: 'CCAC0048 - Emergências anestésicas - A - 2023.2', ch: 32},
@@ -190,7 +193,7 @@ disciplinas = [
 	{siape: 1271771, id: 'CSO0051.A.2023.1', componente: 'CSO0051', turma: 'A', ano: 2023, semestre: 1, text: 'CSO0051 - DIREITO TRIBUTÁRIO I - A - 2023.1', ch: 8},
 	{siape: 1066156, id: 'CSO0051.A.2023.1', componente: 'CSO0051', turma: 'A', ano: 2023, semestre: 1, text: 'CSO0051 - DIREITO TRIBUTÁRIO I - A - 2023.1', ch: 4},
 	{siape: 1066156, id: 'CSO0052.A.2022.2', componente: 'CSO0052', turma: 'A', ano: 2022, semestre: 2, text: 'CSO0052 - DIREITO TRIBUTÁRIO II - A - 2022.2', ch: 64},
-	{siape: 1271771, id: 'CSO0052.A.2023.2', componente: 'CSO0052', turma: 'A', ano: 2023, semestre: 2, text: 'CSO0052 - DIREITO TRIBUTÁRIO II - A - 2023.2', ch: 32},
+	{siape: 1271771, id: 'CSO0052.A.2023.2', componente: 'CSO0052', turma: 'A', ano: 2023, semestre: 2, text: 'CSO0052 - DIREITO TRIBUTÁRIO II - A - 2023.2', ch: 64},
 	{siape: 1331003, id: 'CSO0053.A.2023.1', componente: 'CSO0053', turma: 'A', ano: 2023, semestre: 1, text: 'CSO0053 - ECONOMIA POLÍTICA - A - 2023.1', ch: 64},
 	{siape: 1317204, id: 'CSO0054.A.2022.2', componente: 'CSO0054', turma: 'A', ano: 2022, semestre: 2, text: 'CSO0054 - ESTÁGIO SUPERVISIONADO I - A - 2022.2', ch: 32},
 	{siape: 1317204, id: 'CSO0054.A.2023.2', componente: 'CSO0054', turma: 'A', ano: 2023, semestre: 2, text: 'CSO0054 - ESTÁGIO SUPERVISIONADO I - A - 2023.2', ch: 32},
