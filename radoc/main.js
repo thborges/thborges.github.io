@@ -407,9 +407,13 @@ function draw_table(form) {
 			if (field.getvalue)
 				row += td_prefix + field.getvalue(form, data, data[field.name])
 			else {
-				if (field.type == 'date')
-					row += td_prefix + (new Intl.DateTimeFormat('pt-BR')).format(new Date(data[field.name]+'T00:00'))
-				else
+				if (field.type == 'date') {
+					try {
+						row += td_prefix + (new Intl.DateTimeFormat('pt-BR')).format(new Date(data[field.name]+'T00:00'))
+					} catch (error) {
+						row += td_prefix + "data inválida, edite para corrigir."
+					}
+				} else
 					row += td_prefix + data[field.name]
 			}
 		});
